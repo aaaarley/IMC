@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      CALCULADORA IMC
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,24 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">CALCULADORA IMC</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-label>PESO</ion-label>
+    <ion-input [(ngModel)]="peso" id="p"></ion-input>
+    <br><br>
+    <ion-label>TALLA</ion-label>
+    <ion-input [(ngModel)]="talla" id="t"></ion-input><br>
+    <br><br>
+    <button class="button" (click)="calcular() ">CALCULAR</button>    
   </div>
+  <ion-item>
+    <div>
+      <ion-label>I.M.C</ion-label>
+    {{imc}}
+    </div>
+    
+  </ion-item>
 </ion-content>
